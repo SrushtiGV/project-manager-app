@@ -1,103 +1,107 @@
-# Project Flow - Modern Project Management Board
+<h1 align="center">
+  🚀 Project Manager App
+</h1>
 
-Project Flow is a full-stack, visually rich project management application built on the MERN stack. It features a modern Glassmorphism UI, a real-time Kanban board for task tracking, and seamless team collaboration tools. 
+<p align="center">
+  <strong>A full-stack project management application built with the modern MERN stack.</strong>
+</p>
 
-Designed for both individuals and small teams, Project Flow ensures your projects stay organized and your team stays on the same page.
+<div align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js" />
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+</div>
 
-![Project Flow Cover](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop) *(Background theme inspiration)*
+<br />
 
-## ✨ Key Features
+## 🌟 Features
 
-- **Robust Authentication**: Secure User Registration and Login powered by JWT and bcrypt.
-- **Project Workspaces**: Create unlimited distinct projects. Each project acts as its own isolated workspace.
-- **Interactive Kanban Board**: Visualize workflow with drag-and-drop-style status updates (`Todo` → `In Progress` → `Done`).
-- **Detailed Task Management**: 
-  - Set priorities (Low, Medium, High).
-  - Define due dates.
-  - Write detailed descriptions.
-  - Search tasks by title or filter to view only your assigned tasks.
-- **Team Collaboration**: Invite existing users to your projects so they can instantly collaborate and manage tasks alongside you.
-- **Modern Glassmorphism UI**: A breathtaking, responsive frontend featuring frosted glass elements, smooth micro-animations, and dynamic progress tracking.
+- 🔐 **Secure Authentication**: User signup and login powered by JWT and bcrypt.
+- ⚡ **Lightning Fast Frontend**: Built with React 19 and Vite for an optimal development and user experience.
+- 🗄️ **Robust Database**: MongoDB integration via Mongoose for seamless data modeling and queries.
+- 🌐 **RESTful API**: A well-structured Express.js backend handling all business logic and data processing.
 
-## 🚀 Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
-- **React.js (Vite)**: Lightning-fast development environment and optimized production builds.
-- **Vanilla CSS**: Custom styling architecture featuring Glassmorphism variables, CSS variables for theming, and responsive grids.
-- **Axios**: Clean and promise-based HTTP client for API interactions.
+- **React 19**
+- **Vite**
+- **Axios** (for API requests)
 
 ### Backend
-- **Node.js & Express.js**: Fast, unopinionated, minimalist web framework.
-- **MongoDB & Mongoose**: Flexible NoSQL database with strict schema definitions.
-- **JSON Web Tokens (JWT)**: Stateless API authorization.
+- **Node.js & Express.js**
+- **MongoDB & Mongoose**
+- **JWT (JSON Web Tokens)** & **Bcrypt.js** (Auth & Security)
+- **Dotenv** & **CORS**
 
 ---
 
-## 🛠️ Local Development Setup
+## 🚀 Getting Started
 
-To run this project locally, you will need **Node.js** and **MongoDB** installed on your system. 
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-### 1. Clone the repository
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/) (v16 or higher)
+- [MongoDB](https://www.mongodb.com/) installed locally or a MongoDB Atlas URI.
+
+### 1. Installation & Setup
+
+Clone the repository and navigate into the project folder:
+
 ```bash
-git clone https://github.com/sujalvk888/project-manager-app.git
+git clone https://github.com/SrushtiGV/project-manager-app.git
 cd project-manager-app
 ```
 
 ### 2. Backend Setup
-1. Open a terminal and navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file in the `backend` folder based on `.env.example` or with the following variables:
-   ```env
-   MONGO_URI=mongodb://127.0.0.1:27017/projectmanager
-   PORT=5000
-   JWT_SECRET=your_super_secret_jwt_key
-   ```
-4. Start the server:
-   ```bash
-   npm start
-   ```
-   *The server will run on http://localhost:5000.*
+
+Open a terminal and navigate to the `backend` directory:
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the `backend` directory and add the following:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+Start the backend server:
+
+```bash
+npm start
+```
+*The server should now be running on `http://localhost:5000`.*
 
 ### 3. Frontend Setup
-1. Open a **new** terminal and navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. (Optional) Create a `.env` file to override the default local backend URL:
-   ```env
-   VITE_API_URL=http://localhost:5000/api
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-5. Open your browser and navigate to the URL provided by Vite (usually `http://localhost:5173`).
 
----
+Open a new terminal window and navigate to the `frontend` directory:
 
-## ☁️ Deployment
+```bash
+cd frontend
+npm install
+```
 
-This project is fully structured for modern cloud hosting.
+Start the development server:
 
-- **Frontend Hosting**: Optimized for [Vercel](https://vercel.com). Just connect the repository, set the root directory to `frontend`, and configure your `VITE_API_URL` environment variable.
-- **Backend Hosting**: Optimized for [Render](https://render.com). Connect the repository, set the root directory to `backend`, and add your `MONGO_URI`, `JWT_SECRET`, and `PORT` environment variables.
+```bash
+npm run dev
+```
+*The frontend should now be running and accessible via the local URL provided by Vite.*
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
+Contributions, issues, and feature requests are always welcome! Feel free to check the issues page if you want to contribute.
 
 ## 📝 License
 
-This project is open-source and available under the [ISC License](LICENSE).
+This project is open-source and licensed under the **ISC** License.
